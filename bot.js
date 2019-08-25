@@ -25,7 +25,11 @@ client.on('message', msg => {
   if (msg.content.startsWith("-findscam")){
     client.channels.find("name","scams-and-issues").send("Found!");
   }
-})
+  
+  if (msg.content.startsWith("-github")){
+    msg.reply("https://github.com/MegamanBn/Hilltop-Bot");
+  }
+});
 
 client.login(config.token);
 
